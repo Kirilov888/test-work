@@ -1,4 +1,10 @@
 .block-title {
+    text-align: center;
+
+    h3 {
+        white-space: nowrap;
+    }
+
     span {
         display: block;
         margin-top: 10px;

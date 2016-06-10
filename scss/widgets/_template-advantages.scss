@@ -1,0 +1,80 @@
+.template-advantages {
+    background-image: url("../images/template-advantages/template-advantages-background.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 65px;
+    padding-bottom: 111px;
+    text-align: center;
+    color: $blurWhite;
+
+    article {
+        position: relative;
+        padding-top: 110px;
+
+        &::before {
+            content: attr(data-count);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: 90px;
+            height: 90px;
+            padding: .4em .45em;
+            background-color: $whiteColor;
+            box-sizing: border-box;
+            font-size: 60px;
+            font-family: $breeSerifFont;
+            color: $baseTextColor;
+
+            @include border-radius(50%);
+
+            @include transform(translateX(-50%));
+        }
+
+        h5 {
+            margin-bottom: 20px;
+            color: $whiteColor;
+        }
+    }
+
+    h3 {
+        margin-right: -50px;
+        margin-left: -50px;
+    }
+
+    .row {
+        &:first-child {
+            margin-bottom: 45px;
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 55px;
+        padding-bottom: 91px;
+    }
+
+
+    @include breakpoint(small) {
+        padding-top: 45px;
+        padding-bottom: 81px;
+    }
+
+
+    @include breakpoint(wxtra-small) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .row {
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h3 {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}

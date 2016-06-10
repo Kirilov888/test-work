@@ -1,6 +1,8 @@
 $whiteColor: #fff;
+$blurWhite: #faeedf;
 $mainLinkColor: #3a494c;
 $lightenBlack: #3a494c;
+$blueColor: #036b7e;
 
 $ubuntuFont: "Ubuntu", sans-serif;
 $breeSerifFont: "Bree Serif", serif;
@@ -83,6 +85,7 @@ h3 {
 h5 {
     font-size: 24px;
     line-height: 24px;
+    color: $lightenBlack;
 
     @include breakpoint(small) {
         font-size: 20px;

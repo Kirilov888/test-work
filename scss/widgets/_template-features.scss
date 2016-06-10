@@ -1,0 +1,82 @@
+.template-features {
+    padding-top: 50px;
+    padding-bottom: 115px;
+
+    h3 {
+        color: $lightenBlack;
+    }
+
+    ul {
+        li {
+            @include transition(color 0.2s ease-in);
+
+            &::before {
+                content: "\f0da";
+                position: relative;
+                margin-right: 8px;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                will-change: color;
+
+                @include transform(rotate(90deg));
+            }
+
+            &:hover {
+                color: $blueColor;
+            }
+        }
+    }
+
+    figure {
+        float: left;
+        margin-right: 30px;
+    }
+
+    article {
+        h5 {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: $blueColor;
+            text-decoration: underline;
+        }
+    }
+
+    .row {
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 40px;
+        padding-bottom: 65px;
+
+        article {
+            h5 {
+                margin-bottom: 10px;
+            }
+        }
+
+        figure {
+            margin-right: 10px;
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        padding-top: 30px;
+        padding-bottom: 10px;
+
+        figure, article {
+            text-align: center;
+        }
+
+        figure {
+            float: none;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
