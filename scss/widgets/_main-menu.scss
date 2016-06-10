@@ -1,0 +1,91 @@
+.main-menu {
+    float: right;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: $bold;
+
+    .menu-hamburger {
+        display: none;
+    }
+
+    .navigation {
+        li {
+            display: inline-block;
+            margin: 0 5px;
+
+            a {
+                padding: 10px 15px;
+                color: $mainLinkColor;
+
+                @include breakpoint(category-menu-desktop) {
+                    &:hover {
+                        background-color: $mainLinkColor;
+                        color: $whiteColor;
+
+                        @include border-radius(5px);
+                    }
+                }
+            }
+
+            .active {
+                background-color: $mainLinkColor;
+                color: $whiteColor;
+
+                @include border-radius(5px);
+            }
+        }
+    }
+
+    @include breakpoint(small) {
+        .navigation {
+            li {
+                margin: 0 3px;
+
+                a {
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        .navigation {
+            display: none;
+
+            li, a {
+                display: block;
+                margin: 0;
+            }
+        }
+
+        .menu-hamburger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+
+            span {
+                display: block;
+                width: 100%;
+                height: 20%;
+                margin-bottom: 20%;
+                background-color: $mainLinkColor;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.header-wraper {
+    position: relative;
+}

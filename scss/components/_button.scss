@@ -1,0 +1,16 @@
+.button {
+    padding: 5px 15px;
+    background-color: $whiteColor;
+    font-family: $breeSerifFont;
+    font-size: 20px;
+    color: $mainLinkColor;
+
+    @include border-radius(3px);
+
+    @include breakpoint(category-menu-desktop) {
+        &:hover {
+            background-color: $mainLinkColor;
+            color: $whiteColor;
+        }
+    }
+}

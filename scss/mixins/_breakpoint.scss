@@ -1,0 +1,67 @@
+@mixin breakpoint($point) {
+    @if $point == large-desctop {
+        @media (min-width: 1600px) {
+            @content;
+        }
+    }
+
+    @if $point == large {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point == category-menu-desktop {
+        @media (min-width: 991px) {
+            @content;
+        }
+    }
+
+    @else if $point == category-menu-mobile {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }
+
+    @else if $point == medium {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }
+
+    @else if $point == medium-desctop {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $point == small {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    }
+
+    @else if $point == extra-small {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $point == small-tablet-portrait {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $point == mobile-landscape {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+
+    @else if $point == mobile {
+        @media (max-width: 380px) {
+            @content;
+        }
+    }
+}

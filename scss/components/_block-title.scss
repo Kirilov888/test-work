@@ -1,0 +1,10 @@
+.block-title {
+    span {
+        display: block;
+        margin-top: 10px;
+    }
+
+    @include breakpoint(large) {
+        padding: 0 300px;
+    }
+}

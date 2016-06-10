@@ -1,5 +1,5 @@
 
-/site/.idea/
-/site/~/.sass-cache/
-/site/.sass-cache/
-/site/npm-debug.log
+/.idea/
+~/.sass-cache/
+/.sass-cache/
+/npm-debug.log

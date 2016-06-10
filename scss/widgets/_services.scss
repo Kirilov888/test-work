@@ -1,0 +1,51 @@
+.services {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    text-align: center;
+
+    .service-item {
+        padding: 0 20px;
+
+        figure {
+            height: 220px;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            margin-bottom: 25px;
+            color: $lightenBlack;
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+
+    @include breakpoint(small) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+
+        .service-item {
+            padding: 0 10px;
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        padding-top: 5px;
+        padding-bottom: 25px;
+
+        .service-item {
+            padding: 0;
+
+            figure {
+                height: auto;
+            }
+        }
+    }
+}

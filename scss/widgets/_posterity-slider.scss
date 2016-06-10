@@ -1,0 +1,111 @@
+$sliderHeight: 515px;
+
+.posterity-slider {
+    color: $whiteColor;
+
+    .posterity-slider-item {
+        height: $sliderHeight;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .slick-dots {
+        bottom: 40px;
+
+        li {
+            button {
+                &::before {
+                    content: ' ';
+                    border: 4px solid $whiteColor;
+                    box-sizing: border-box;
+
+                    @include border-radius(50%);
+
+                    @include opacity(1);
+                }
+            }
+
+            &.slick-active {
+                button {
+                    &::before {
+                        background-color: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 35px;
+    }
+
+    .button {
+        margin-top: 20px;
+    }
+
+    article {
+        padding-top: 100px;
+        padding-right: 100px;
+    }
+
+    @include breakpoint(large) {
+        article {
+            padding-right: 300px;
+        }
+    }
+
+
+    @include breakpoint(medium) {
+        h2 {
+            padding-right: 0;
+        }
+    }
+
+
+    @include breakpoint(small) {
+        .posterity-slider-item {
+            height: $sliderHeight * 0.8;
+        }
+
+        h2 {
+            padding-right: 0;
+        }
+
+        article {
+            text-align: center;
+            padding-top: 55px;
+            padding-right: 0px;
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        .posterity-slider-item {
+            height: $sliderHeight * 0.76;
+        }
+
+        .slick-dots {
+            display: none !important;
+        }
+
+        article {
+            text-align: center;
+            padding-top: 20px;
+            padding-right: 0px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            padding-right: 0;
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+    }
+}

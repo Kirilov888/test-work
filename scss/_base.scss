@@ -1,0 +1,102 @@
+$whiteColor: #fff;
+$mainLinkColor: #3a494c;
+$lightenBlack: #3a494c;
+
+$ubuntuFont: "Ubuntu", sans-serif;
+$breeSerifFont: "Bree Serif", serif;
+$bold: 700;
+
+$baseTextColor: #666666;
+
+body {
+    font-size: 14px;
+    font-family: $ubuntuFont;
+    line-height: 25px;
+    color: $baseTextColor;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+
+    @include transition(all 0.3s ease-out);
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+h2, h3, h5 {
+    font-family: $breeSerifFont;
+}
+
+h2 {
+    font-size: 64px;
+    line-height: 64px;
+
+    @include breakpoint(small) {
+        font-size: 38px;
+        line-height: 38px;
+    }
+
+
+    @include breakpoint(extra-small) {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+
+h3 {
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+
+    @include breakpoint(small) {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+
+    @include breakpoint(extra-small) {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        font-size: 21px;
+        line-height: 25px;
+    }
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 24px;
+
+    @include breakpoint(small) {
+        font-size: 20px;
+    }
+
+
+    @include breakpoint(extra-small) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

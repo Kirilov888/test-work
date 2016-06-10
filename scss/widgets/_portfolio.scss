@@ -1,0 +1,138 @@
+.portfolio {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background-image: url("../images/portfolio/portfolio-background.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: $whiteColor;
+
+    .tabs {
+        width: 100%;
+        display: inline-block;
+
+        .tab-links {
+            margin-top: 60px;
+            margin-bottom: 60px;
+
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            li {
+                display: inline-block;
+                margin: 0;
+                list-style: none;
+            }
+
+            a {
+                @extend .button;
+
+                background-color: transparent;
+                text-transform: uppercase;
+                color: $whiteColor;
+
+                &:hover {
+                    background-color: $whiteColor;
+                    color: $mainLinkColor;
+                }
+            }
+
+            li.active a, li.active a:hover {
+                background-color: $whiteColor;
+                color: $mainLinkColor;
+            }
+        }
+
+        .tab-content {
+            .tab {
+                display: none;
+
+                .row {
+                    &:first-child {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            .tab.active {
+                display: block;
+            }
+
+            .portfolio-item {
+                position: relative;
+                display: block;
+
+                &::before {
+                    content: '\f07d';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: 45px;
+                    color: $whiteColor;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    will-change: opacity;
+
+                    @include transform(translate(-50%, -50%) rotate(45deg));
+
+                    @include opacity(0);
+
+                    @include transition(opacity 0.4s ease-out);
+
+                    @include text-shadow(3px -2px 0 -1px $mainLinkColor);
+                }
+
+                &:hover {
+                    &::before {
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
+
+    .show-more {
+        margin-top: 50px;
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+
+    @include breakpoint(small) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+
+    @include breakpoint(extra-small) {
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+        .tabs {
+            .tab-links {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .tab-content {
+                .tab {
+                    margin-right: -15px;
+                    margin-left: -15px;
+                }
+            }
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+    }
+}
