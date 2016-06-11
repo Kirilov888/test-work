@@ -44,8 +44,10 @@ function mobileMenuAnimation() {
 
         if (open) {
             element.removeClass('open').slideUp('slow');
+            $(this).removeClass('active');
         } else {
             element.addClass('open').slideDown('slow');
+            $(this).addClass('active');
         }
     });
 };

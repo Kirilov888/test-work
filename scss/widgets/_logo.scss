@@ -2,11 +2,15 @@
     display: inline-block;
 
     @include breakpoint(small) {
-        max-width: 200px;
+        img {
+            width: 200px;
+        }
     }
 
 
     @include breakpoint(extra-small) {
-        max-width: 150px;
+        img {
+            width: 150px;
+        }
     }
 }
