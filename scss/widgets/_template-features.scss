@@ -1,6 +1,6 @@
 .template-features {
     padding-top: 50px;
-    padding-bottom: 115px;
+    padding-bottom: 65px;
 
     h3 {
         color: $lightenBlack;
@@ -51,7 +51,7 @@
 
     @include breakpoint(extra-small) {
         padding-top: 40px;
-        padding-bottom: 65px;
+        padding-bottom: 35px;
 
         article {
             h5 {

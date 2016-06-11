@@ -296,7 +296,7 @@ var initMap = function() {
         });
 
     var content = document.createElement('div');
-    content.innerHTML = "<strong style='color: #666666'>Wee are hear!</strong>";
+    content.innerHTML = "<strong style='color: #666666'>We are here!</strong>";
     var infowindow = new google.maps.InfoWindow({
         content: content
     });
