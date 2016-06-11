@@ -1,0 +1,159 @@
+.testimonials {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    background-color: $blueColor;
+    color: $whiteColor;
+
+    h5 {
+        color: $whiteColor;
+    }
+
+    .block-title {
+        margin-bottom: 40px;
+    }
+
+    .carousel {
+        max-width: 768px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .carousel-item {
+            &:focus {
+                outline: none;
+            }
+
+            figure {
+                float: left;
+                margin-right: 30px;
+                padding-left: 10px;
+            }
+
+            .small-text {
+                font-size: 16px;
+                text-transform: lowercase;
+            }
+
+            .visitor-review {
+                float: left;
+                width: 70%;
+                padding-top: 10px;
+            }
+
+            .quotes {
+                position: relative;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                padding-left: 35px;
+                color: $opasityWhiteColor;
+
+                &::before, &::after {
+                    position: absolute;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: 25px;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                }
+
+                &::before {
+                    content: "\f10d";
+                    top: 15px;
+                    left: 1px;
+                }
+
+                &::after {
+                    content: "\f10e";
+                    right: 1px;
+                    bottom: 0;
+                }
+            }
+        }
+
+        .slick-dots {
+            li {
+                button {
+                    &::before {
+                        content: ' ';
+                        width: 14px;
+                        height: 14px;
+                        background-color: $whiteColor;
+                        border: 2px solid $orangeColor;
+                        box-sizing: border-box;
+
+                        @include border-radius(50%);
+
+                        @include opacity(1);
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        &::before {
+                            background-color: $orangeColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small) {
+        .carousel {
+            text-align: center;
+
+            .carousel-item {
+                .quotes {
+                    padding-top: 30px;
+                    padding-bottom: 15px;
+
+                    &::before {
+                        top: 10px;
+                    }
+
+                    &::after {
+                        bottom: -5px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .carousel {
+            text-align: center;
+
+            .carousel-item {
+                figure {
+                    float: none;
+                    margin-right: 0;
+
+                    img {
+                        display: inline-block;
+                    }
+                }
+
+                .visitor-review {
+                    float: none;
+                    width: 100%;
+                }
+
+                .quotes {
+                    padding-top: 30px;
+                    padding-bottom: 10px;
+                    padding-left: 0;
+
+                    &::before {
+                        top: 10px;
+                    }
+
+                    &::after {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

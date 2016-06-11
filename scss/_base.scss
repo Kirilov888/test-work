@@ -1,8 +1,12 @@
 $whiteColor: #fff;
 $blurWhite: #faeedf;
+$opasityWhiteColor: #cddee2;
 $mainLinkColor: #3a494c;
 $lightenBlack: #3a494c;
 $blueColor: #036b7e;
+$lightBlueColor: #a5d2da;
+$orangeColor: #fbbe67;
+$contactFormBg: #2c2c2c;
 
 $ubuntuFont: "Ubuntu", sans-serif;
 $breeSerifFont: "Bree Serif", serif;
@@ -11,10 +15,15 @@ $bold: 700;
 $baseTextColor: #666666;
 
 body {
+    padding-top: 145px;
     font-size: 14px;
     font-family: $ubuntuFont;
     line-height: 25px;
     color: $baseTextColor;
+
+    @include breakpoint(extra-small) {
+        padding-top: 55px;
+    }
 }
 
 img {
@@ -84,7 +93,7 @@ h3 {
 
 h5 {
     font-size: 24px;
-    line-height: 24px;
+    line-height: 30px;
     color: $lightenBlack;
 
     @include breakpoint(small) {
@@ -94,12 +103,18 @@ h5 {
 
     @include breakpoint(extra-small) {
         font-size: 18px;
-        line-height: 20px;
+        line-height: 25px;
     }
 
 
     @include breakpoint(mobile-landscape) {
         font-size: 16px;
-        line-height: 18px;
+        line-height: 20px;
     }
+}
+
+.clear-fix::before, .clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
 }

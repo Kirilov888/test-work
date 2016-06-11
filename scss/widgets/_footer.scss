@@ -1,0 +1,28 @@
+footer {
+    position: relative;
+    color: $whiteColor;
+
+    .scroll-to-top-button {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        padding: 10px;
+        font-size: 25px;
+        line-height: 25px;
+        color: $whiteColor;
+        background-color: $blueColor;
+
+        @include border-radius(3px);
+    }
+
+    .map {
+        width: 100%;
+        height: 350px;
+    }
+
+    @include breakpoint(extra-small) {
+        .map {
+            height: 150px;
+        }
+    }
+}

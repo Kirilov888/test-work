@@ -1,0 +1,91 @@
+.fags {
+    padding-top: 65px;
+    padding-bottom: 30px;
+
+    .block-title {
+        margin-bottom: 55px;
+    }
+
+    h5, h3 {
+        color: $lightenBlack;
+    }
+
+    .akkordeon {
+        text-align: justify;
+
+        &::after {
+            content: ' ';
+            display: inline-block;
+            width: 100%;
+        }
+
+        li {
+            display: inline-block;
+            width: 30%;
+            margin-bottom: 50px;
+            box-size: border-box;
+            text-align: left;
+
+            & > h5 {
+                position: relative;
+                padding-right: 40px;
+                cursor: pointer;
+
+                &::after {
+                    content: "\f067";
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    right: 0;
+                    width: 40px;
+                    height: 40px;
+                    padding: .35em 0.4em;
+                    background-color: $baseTextColor;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: 25px;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    box-sizing: border-box;
+                    color: $whiteColor;
+
+                    @include border-radius(50%);
+                }
+
+                &:hover, &.active {
+                    &::after {
+                        background-color: $blueColor;
+                    }
+                }
+
+                &.active {
+                    &::after {
+                        content: "\f068";
+                    }
+                }
+            }
+
+            & > div {
+                display: none;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        .block-title {
+            margin-bottom: 0;
+        }
+
+        .akkordeon {
+            li {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+    }
+}

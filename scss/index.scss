@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "compass/reset";
+@import "compass/css3/user-interface";
 
 @import "grid";
 
@@ -10,6 +11,7 @@
 @import "base";
 
 @import "components/button";
+@import "components/input";
 @import "components/block-title";
 
 @import "widgets/main-menu";
@@ -20,5 +22,15 @@
 @import "widgets/portfolio";
 @import "widgets/template-features";
 @import "widgets/template-advantages";
+@import "widgets/meet-the-team";
+@import "widgets/testimonials";
+@import "widgets/video";
+@import "widgets/how-it-works";
+@import "widgets/template-properties";
+@import "widgets/fags";
+@import "widgets/blog";
+@import "widgets/our-partner";
+@import "widgets/footer";
+@import "widgets/contact-form";
 
 // @import "layouts/main-layout";

@@ -1,0 +1,35 @@
+.template-properties {
+    padding-top: 65px;
+    padding-bottom: 80px;
+    background-image: url("../images/template-properties/background-color.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+
+    .block-title {
+        margin-bottom: 55px;
+    }
+
+    h5, h3 {
+        color: $lightenBlack;
+    }
+
+    .progress-bar {
+        position: relative;
+        display: inline-block;
+        width: 170px;
+        height: 170px;
+        margin-bottom: 25px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        .block-title {
+            margin-bottom: 0;
+        }
+    }
+}

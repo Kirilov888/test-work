@@ -1,6 +1,12 @@
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
     padding-top: 45px;
     padding-bottom: 50px;
+    background-color: $whiteColor;
 
     @include breakpoint(medium) {
         padding-top: 40px;
@@ -15,7 +21,7 @@ header {
 
 
     @include breakpoint(extra-small) {
-        padding-top: 25px;
-        padding-bottom: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }

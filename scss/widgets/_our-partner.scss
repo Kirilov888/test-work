@@ -1,0 +1,48 @@
+.our-partner {
+    padding-top: 65px;
+    padding-bottom: 68px;
+
+    .block-title {
+        margin-bottom: 25px;
+
+        h3 {
+            margin-right: -40px;
+            margin-left: -40px;
+            color: $lightenBlack;
+        }
+    }
+
+    .partner-list {
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 30px;
+
+            a {
+                @include opacity(0.5);
+
+                img {
+                    max-width: 100px;
+                }
+
+                &:hover {
+                    @include opacity(1);
+                }
+            }
+        }
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        .block-title {
+            margin-bottom: 25px;
+
+            h3 {
+                margin: 0;
+            }
+        }
+    }
+}

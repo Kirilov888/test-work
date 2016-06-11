@@ -1,0 +1,25 @@
+.how-it-works {
+    padding-top: 65px;
+    padding-bottom: 80px;
+
+    .block-title {
+        margin-bottom: 55px;
+    }
+
+    h5 {
+        color: $lightenBlack;
+    }
+
+    h5, p {
+        margin-bottom: 25px;
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        .block-title {
+            margin-bottom: 0;
+        }
+    }
+}

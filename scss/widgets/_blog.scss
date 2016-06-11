@@ -1,0 +1,73 @@
+.blog {
+    padding-top: 65px;
+    padding-bottom: 88px;
+    background-image: url("../images/blog/blog-bg.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .block-title {
+        margin-bottom: 55px;
+        color: $whiteColor;
+    }
+
+    article {
+        padding: 15px;
+        background-color: $whiteColor;
+
+        .permalink {
+            @extend h5;
+
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            &:hover {
+                color: $blueColor;
+            }
+        }
+
+        .description {
+            padding-bottom: 30px;
+        }
+
+        figure {
+            position: relative;
+
+            figcaption {
+                @extend h5;
+
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                padding: 5px;
+                background-color: $whiteColor;
+                text-align: center;
+            }
+        }
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 40px;
+        padding-bottom: 30px;
+
+        .block-title {
+            margin-bottom: 25px;
+        }
+
+        article {
+            .block-title {
+                margin-bottom: 35px;
+            }
+
+            figure, .permalink {
+                text-align: center;
+            }
+
+            .description {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

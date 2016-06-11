@@ -1,0 +1,84 @@
+.meet-the-team {
+    padding-top: 50px;
+    padding-bottom: 75px;
+    text-align: center;
+
+    h3 {
+        color: $lightenBlack;
+    }
+
+    .block-title {
+        margin-bottom: 50px;
+    }
+
+    .team-member {
+        padding: 0 10px;
+
+        figure {
+            margin-bottom: 35px;
+        }
+
+        h5 {
+            margin-bottom: 25px;
+        }
+
+        .socials-link {
+            margin-top: 40px;
+
+            li {
+                display: inline-block;
+                margin-left: 5px;
+                margin-right: 5px;
+
+                a {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    background-color: $lightBlueColor;
+                    font-size: 25px;
+                    color: $whiteColor;
+                    will-change: background-color;
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        @include transform(translate(-50%, -50%));
+                    }
+
+                    @include border-radius(50%);
+
+                    &:hover {
+                        background-color: $blueColor;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(extra-small) {
+        padding-top: 40px;
+        padding-bottom: 50px;
+
+        .block-title {
+            margin-bottom: 0;
+        }
+
+        .team-member {
+            padding: 0;
+
+            .socials-link {
+                margin-top: 20px;
+            }
+
+            figure {
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

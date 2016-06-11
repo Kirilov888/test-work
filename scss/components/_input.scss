@@ -1,0 +1,44 @@
+input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 17px;
+    border: none;
+    background-color: $whiteColor;
+    box-sizing: border-box;
+    line-height: 40px;
+
+    @include border-radius(3px);
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    @include input-placeholder {
+        color: $baseTextColor;
+    }
+}
+
+textarea {
+    display: block;
+    border: none;
+    width: 100%;
+    padding-left: 17px;
+    background-color: $whiteColor;
+    box-sizing: border-box;
+    font-family: $ubuntuFont;
+    line-height: 40px;
+    resize: none;
+
+    @include border-radius(3px);
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    @include input-placeholder {
+        color: $baseTextColor;
+    }
+}
