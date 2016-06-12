@@ -7,6 +7,7 @@ $blueColor: #036b7e;
 $lightBlueColor: #a5d2da;
 $orangeColor: #fbbe67;
 $contactFormBg: #2c2c2c;
+$opacytiBlack: rgba(0, 0, 0, 0.6);
 
 $ubuntuFont: "Ubuntu", sans-serif;
 $breeSerifFont: "Bree Serif", serif;
@@ -117,4 +118,8 @@ h5 {
     content: '';
     display: block;
     clear: both;
+}
+
+.fancybox-overlay {
+    background-color: $opacytiBlack;
 }

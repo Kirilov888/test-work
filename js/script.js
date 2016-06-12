@@ -146,18 +146,23 @@ function initAcordeon() {
 
 };
 
-function initSmoothScroll(element, scrollDuration) {
-    $(element).click(function() {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top
-            }, scrollDuration);
-            return false;
+function initSmoothScroll(scrollDuration) {
+    $("a[href^='#']").click(function() {
+        if (!$(this).hasClass('tab-link')) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, scrollDuration);
+                    return false;
+                }
+            }
         }
+
     });
-};
+}
 
 
 var initMap = function() {
@@ -283,7 +288,7 @@ var initMap = function() {
     var mapElement = document.getElementById('map'),
         map = new google.maps.Map(mapElement, mapOptions),
         markerImage = new google.maps.MarkerImage(
-            '../images/marker.png',
+            'images/marker.png',
             new google.maps.Size(48, 60),
             new google.maps.Point(0, 0),
             new google.maps.Point(0, 33)
@@ -318,6 +323,9 @@ function initEvents() {
         initSlickSlider('.carousel');
 
         tabsInit();
+        $("a.portfolio-item").fancybox({
+
+        });
 
         $(document).on('scroll', function() {
             if (isVisible('.template-properties')) {
@@ -337,7 +345,7 @@ function initEvents() {
 
         initAcordeon();
 
-        initSmoothScroll('.scroll-to-top-button', 1400);
+        initSmoothScroll(1400);
 
         initMap();
 
